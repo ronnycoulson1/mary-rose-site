@@ -73,7 +73,7 @@ export default function Navbar() {
       {/* Links */}
       <div style={{ display: "flex", alignItems: "center", gap: "2.5rem" }}>
         {[
-          { label: "Features", href: "/features" },
+          { label: "Features", href: "features" },
           { label: "Pricing", href: "/pricing" },
           { label: "About", href: "/about" },
         ].map((link) => (
