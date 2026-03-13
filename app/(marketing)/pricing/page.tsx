@@ -7,7 +7,7 @@ import {
   Infinity,
   Target,
   Star,
-  HandShake,
+  Handshake,
   MessageCircle,
   LayoutDashboard,
   FilePlus,
