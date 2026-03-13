@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Bird, Lock, Users, MessageCircle } from "lucide-react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -12,7 +13,6 @@ export default function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // TODO: wire up your auth here (Supabase, NextAuth, Clerk, etc.)
     setTimeout(() => setLoading(false), 1500);
   };
 
@@ -21,41 +21,69 @@ export default function LoginPage() {
 
       {/* ── LEFT — Branding panel ── */}
       <div style={{ width: "45%", background: "#1C1917", padding: "3rem", display: "flex", flexDirection: "column", justifyContent: "space-between", position: "relative", overflow: "hidden" }}>
-        {/* Background decoration */}
-        <div style={{ position: "absolute", bottom: "-80px", right: "-80px", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, rgba(196,169,125,0.08) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: "30%", left: "-60px", width: "300px", height: "300px", borderRadius: "50%", background: "radial-gradient(circle, rgba(196,169,125,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", bottom: "-80px", right: "-80px", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, rgba(196,169,125,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
-          <div style={{ width: 36, height: 36, borderRadius: "50%", background: "linear-gradient(135deg, #C4A97D, #8B6F47)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>🕊️</div>
+          <div
+          style={{
+            width: 36,
+            height: 36,
+            borderRadius: "50%",
+            background: "linear-gradient(135deg, #C4A97D, #8B6F47)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 16,
+          }}
+        >
+          🕊️
+        </div>
           <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", fontWeight: 500, color: "#F5EFE4" }}>
             Case<span style={{ color: "#C4A97D" }}>Flow</span>
           </span>
         </Link>
 
-        {/* Center quote */}
+        {/* Center content */}
         <div style={{ position: "relative", zIndex: 1 }}>
-          <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "4rem", color: "rgba(196,169,125,0.2)", lineHeight: 1, marginBottom: "1rem" }}>"</div>
-          <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", fontWeight: 400, color: "#F5EFE4", lineHeight: 1.6, fontStyle: "italic", marginBottom: "1.5rem" }}>
-            CaseFlow gave us back the hours we were losing to paperwork — and gave those hours to the families who needed us.
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(196,169,125,0.1)", border: "1px solid rgba(196,169,125,0.2)", padding: "0.4rem 1rem", borderRadius: "100px", marginBottom: "1.75rem" }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#C4A97D", display: "inline-block", boxShadow: "0 0 6px rgba(196,169,125,0.6)" }} />
+            <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.72rem", fontWeight: 500, color: "#C4A97D", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>Founding Partner Access</span>
+          </div>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(1.8rem, 2.5vw, 2.5rem)", fontWeight: 400, color: "#F5EFE4", lineHeight: 1.2, marginBottom: "1.5rem" }}>
+            You're helping build<br />
+            <em style={{ color: "#C4A97D" }}>something meaningful.</em>
+          </h2>
+          <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.9rem", color: "rgba(245,240,232,0.45)", fontWeight: 300, lineHeight: 1.8, marginBottom: "2.5rem" }}>
+            CaseFlow is in early access. As a founding partner, your feedback directly shapes what we build next.
           </p>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <div style={{ width: 36, height: 36, borderRadius: "50%", background: "linear-gradient(135deg, #C4A97D, #8B6F47)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontFamily: "'Jost', sans-serif", fontWeight: 600, fontSize: "0.8rem" }}>MT</div>
-            <div>
-              <div style={{ fontFamily: "'Jost', sans-serif", color: "#F5EFE4", fontSize: "0.85rem", fontWeight: 500 }}>Margaret T.</div>
-              <div style={{ fontFamily: "'Jost', sans-serif", color: "#9B8E84", fontSize: "0.75rem" }}>Thornton Family Funeral Home</div>
-            </div>
+
+          {/* What founding partners get */}
+          <div style={{ display: "flex", flexDirection: "column" as const, gap: "1rem" }}>
+            {[
+              { icon: Lock, text: "Lifetime access — pay once, never again" },
+              { icon: Users, text: "Direct line to the founding team" },
+              { icon: MessageCircle, text: "Your feedback shapes the product" },
+            ].map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.text} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                  <div style={{ width: 32, height: 32, borderRadius: "8px", background: "rgba(196,169,125,0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <Icon size={14} strokeWidth={1.5} color="#C4A97D" />
+                  </div>
+                  <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.82rem", color: "rgba(245,240,232,0.5)", fontWeight: 300 }}>{item.text}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* Bottom stats */}
-        <div style={{ display: "flex", gap: "2rem" }}>
-          {[{ value: "200+", label: "Funeral homes" }, { value: "98%", label: "Satisfaction" }, { value: "14-day", label: "Free trial" }].map((s) => (
-            <div key={s.label}>
-              <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", color: "#C4A97D", lineHeight: 1 }}>{s.value}</div>
-              <div style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.7rem", color: "rgba(245,240,232,0.4)", marginTop: "2px" }}>{s.label}</div>
-            </div>
-          ))}
+        {/* Bottom */}
+        <div style={{ borderTop: "1px solid rgba(196,169,125,0.1)", paddingTop: "1.5rem" }}>
+          <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", color: "rgba(245,240,232,0.25)", fontWeight: 300 }}>
+            Not a founding partner yet?{" "}
+            <Link href="/pricing" style={{ color: "#C4A97D", textDecoration: "none" }}>See the program →</Link>
+          </p>
         </div>
       </div>
 
@@ -63,7 +91,6 @@ export default function LoginPage() {
       <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", padding: "3rem" }}>
         <div style={{ width: "100%", maxWidth: "420px" }}>
 
-          {/* Header */}
           <div style={{ marginBottom: "2.5rem" }}>
             <h1 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "2.5rem", fontWeight: 400, color: "#1C1917", lineHeight: 1.1, marginBottom: "0.75rem" }}>
               Welcome back
@@ -73,9 +100,7 @@ export default function LoginPage() {
             </p>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit}>
-
             {/* Email */}
             <div style={{ marginBottom: "1.25rem" }}>
               <label style={{ display: "block", fontFamily: "'Jost', sans-serif", fontSize: "0.8rem", fontWeight: 500, color: "#6B5E52", marginBottom: "0.5rem", letterSpacing: "0.03em" }}>
@@ -87,7 +112,7 @@ export default function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@funeralhome.com"
                 required
-                style={{ width: "100%", padding: "0.85rem 1rem", border: "1px solid rgba(196,169,125,0.3)", borderRadius: "6px", background: "#fff", fontFamily: "'Jost', sans-serif", fontSize: "0.9rem", color: "#1C1917", outline: "none", transition: "border-color 0.2s", }}
+                style={{ width: "100%", padding: "0.85rem 1rem", border: "1px solid rgba(196,169,125,0.3)", borderRadius: "6px", background: "#fff", fontFamily: "'Jost', sans-serif", fontSize: "0.9rem", color: "#1C1917", outline: "none", transition: "border-color 0.2s", boxSizing: "border-box" as const }}
                 onFocus={(e) => (e.target.style.borderColor = "#C4A97D")}
                 onBlur={(e) => (e.target.style.borderColor = "rgba(196,169,125,0.3)")}
               />
@@ -106,14 +131,14 @@ export default function LoginPage() {
                   Forgot password?
                 </Link>
               </div>
-              <div style={{ position: "relative" }}>
+              <div style={{ position: "relative" as const }}>
                 <input
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   required
-                  style={{ width: "100%", padding: "0.85rem 3rem 0.85rem 1rem", border: "1px solid rgba(196,169,125,0.3)", borderRadius: "6px", background: "#fff", fontFamily: "'Jost', sans-serif", fontSize: "0.9rem", color: "#1C1917", outline: "none", transition: "border-color 0.2s" }}
+                  style={{ width: "100%", padding: "0.85rem 3rem 0.85rem 1rem", border: "1px solid rgba(196,169,125,0.3)", borderRadius: "6px", background: "#fff", fontFamily: "'Jost', sans-serif", fontSize: "0.9rem", color: "#1C1917", outline: "none", transition: "border-color 0.2s", boxSizing: "border-box" as const }}
                   onFocus={(e) => (e.target.style.borderColor = "#C4A97D")}
                   onBlur={(e) => (e.target.style.borderColor = "rgba(196,169,125,0.3)")}
                 />
@@ -152,18 +177,23 @@ export default function LoginPage() {
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#C4A97D"; e.currentTarget.style.background = "#FDF8F2"; }}
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(196,169,125,0.3)"; e.currentTarget.style.background = "#fff"; }}
           >
-            <span style={{ fontSize: "1.1rem" }}>G</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
+              <path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z" fill="#34A853"/>
+              <path d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/>
+              <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/>
+            </svg>
             Continue with Google
           </button>
 
           {/* Sign up link */}
-          <p style={{ textAlign: "center", fontFamily: "'Jost', sans-serif", fontSize: "0.85rem", color: "#9B8E84", marginTop: "2rem" }}>
-            Don't have an account?{" "}
-            <Link href="/signup" style={{ color: "#B8864E", textDecoration: "none", fontWeight: 500 }}
+          <p style={{ textAlign: "center" as const, fontFamily: "'Jost', sans-serif", fontSize: "0.85rem", color: "#9B8E84", marginTop: "2rem" }}>
+            Not a founding partner yet?{" "}
+            <Link href="/pricing" style={{ color: "#B8864E", textDecoration: "none", fontWeight: 500 }}
               onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
               onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
             >
-              Start free trial
+              Apply for early access →
             </Link>
           </p>
         </div>

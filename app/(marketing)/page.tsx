@@ -3,7 +3,10 @@ import Features from "@/components/marketing/Features";
 import HowItWorks from "@/components/marketing/HowItWorks";
 import Testimonials from "@/components/marketing/Testimonials";
 import Pricing from "@/components/marketing/Pricing";
+import Waitlist from "@/components/marketing/Testimonials";
 
+{/**
+    
 function SocialProofBar() {
   return (
     <div style={{ background: "#F0E8DC", borderTop: "1px solid rgba(196,169,125,0.2)", borderBottom: "1px solid rgba(196,169,125,0.2)", padding: "1.25rem 5%" }}>
@@ -39,15 +42,22 @@ function Stats() {
   );
 }
 
+*/}
+
+
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <SocialProofBar />
+     {/*
+     <SocialProofBar />
       <Stats />
+     
+     */} 
       <Features />
       <HowItWorks />
-      <Testimonials />
+      <Waitlist />
+
       <Pricing />
     </>
   );

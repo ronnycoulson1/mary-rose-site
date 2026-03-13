@@ -2,293 +2,67 @@
 
 import Link from "next/link";
 
-const plans = [
-  {
-    name: "Starter",
-    price: "$79",
-    per: "/month",
-    desc: "Perfect for small, independent funeral homes.",
-    features: [
-      "Up to 3 staff members",
-      "Unlimited cases",
-      "Document storage (10GB)",
-      "Calendar & tasks",
-      "Email support",
-    ],
-    cta: "Get started",
-    href: "/signup",
-    highlight: false,
-  },
-  {
-    name: "Professional",
-    price: "$149",
-    per: "/month",
-    desc: "For growing homes that need more power.",
-    features: [
-      "Up to 10 staff members",
-      "Unlimited cases",
-      "Document storage (50GB)",
-      "Payments & invoicing",
-      "Priority support",
-      "Role management",
-    ],
-    cta: "Start free trial",
-    href: "/signup",
-    highlight: true,
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    per: "",
-    desc: "For multi-location funeral home groups.",
-    features: [
-      "Unlimited staff",
-      "Multi-location support",
-      "Unlimited storage",
-      "Dedicated onboarding",
-      "SLA guarantee",
-      "Custom integrations",
-    ],
-    cta: "Contact us",
-    href: "/contact",
-    highlight: false,
-  },
-];
-
 export default function Pricing() {
   return (
-    <section
-      id="pricing"
-      style={{ padding: "7rem 5%", background: "#FAFAF7" }}
-    >
-      <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-        {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-          <p
-            style={{
-              fontFamily: "'Jost', sans-serif",
-              fontSize: "0.75rem",
-              fontWeight: 500,
-              color: "#B8864E",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: "1rem",
-            }}
-          >
-            Simple pricing
-          </p>
-          <h2
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: "clamp(2rem, 3.5vw, 2.8rem)",
-              fontWeight: 400,
-              color: "#1C1917",
-              lineHeight: 1.15,
-            }}
-          >
-            One flat price.
-            <br />
-            <em style={{ color: "#B8864E" }}>No surprises.</em>
-          </h2>
+    <section style={{
+      padding: "7rem 5%",
+      background: "#1C1917",
+      textAlign: "center",
+      position: "relative",
+      overflow: "hidden",
+    }}>
+
+      {/* Background glow */}
+      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "800px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle, rgba(196,169,125,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
+
+      <div style={{ maxWidth: "680px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+
+        {/* Badge */}
+        <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(196,169,125,0.1)", border: "1px solid rgba(196,169,125,0.25)", padding: "0.4rem 1.25rem", borderRadius: "100px", marginBottom: "2rem" }}>
+          <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#C4A97D", display: "inline-block", boxShadow: "0 0 8px rgba(196,169,125,0.6)" }} />
+          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", fontWeight: 500, color: "#C4A97D", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>Founding Partner Program</span>
         </div>
 
-        {/* Cards */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1.5rem",
-          }}
-        >
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              style={{
-                background: plan.highlight ? "#1C1917" : "#fff",
-                border: plan.highlight
-                  ? "2px solid #C4A97D"
-                  : "1px solid rgba(196,169,125,0.2)",
-                borderRadius: "10px",
-                padding: "2rem",
-                position: "relative",
-                boxShadow: plan.highlight
-                  ? "0 20px 60px rgba(28,25,23,0.15)"
-                  : "none",
-                transition: "transform 0.25s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-3px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
-            >
-              {plan.highlight && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "-14px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    background:
-                      "linear-gradient(135deg, #C4A97D, #8B6F47)",
-                    color: "#fff",
-                    fontSize: "0.7rem",
-                    fontWeight: 600,
-                    padding: "4px 16px",
-                    borderRadius: "100px",
-                    fontFamily: "'Jost', sans-serif",
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  Most Popular
-                </div>
-              )}
+        {/* Headline */}
+        <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 400, color: "#F5EFE4", lineHeight: 1.15, marginBottom: "1.25rem" }}>
+          Simple. One price.<br />
+          <em style={{ color: "#C4A97D" }}>No surprises.</em>
+        </h2>
 
-              <div
-                style={{
-                  fontFamily: "'Jost', sans-serif",
-                  fontWeight: 600,
-                  color: plan.highlight ? "#C4A97D" : "#B8864E",
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                {plan.name}
-              </div>
+        <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "1rem", fontWeight: 300, color: "rgba(245,240,232,0.5)", lineHeight: 1.8, marginBottom: "3rem", maxWidth: "480px", margin: "0 auto 3rem" }}>
+          We are inviting the first 20 funeral homes to join as founding partners and help shape the platform. One payment. Lifetime access. Your pricing locked in forever.
+        </p>
 
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: "4px",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: "2.8rem",
-                    color: plan.highlight ? "#F5EFE4" : "#1C1917",
-                    lineHeight: 1,
-                  }}
-                >
-                  {plan.price}
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'Jost', sans-serif",
-                    color: "#9B8E84",
-                    fontSize: "0.875rem",
-                  }}
-                >
-                  {plan.per}
-                </span>
-              </div>
-
-              <p
-                style={{
-                  fontFamily: "'Jost', sans-serif",
-                  fontSize: "0.8rem",
-                  color: plan.highlight
-                    ? "rgba(245,240,232,0.55)"
-                    : "#9B8E84",
-                  marginBottom: "1.5rem",
-                  lineHeight: 1.6,
-                }}
-              >
-                {plan.desc}
-              </p>
-
-              <div
-                style={{
-                  borderTop: `1px solid ${
-                    plan.highlight
-                      ? "rgba(196,169,125,0.2)"
-                      : "rgba(196,169,125,0.15)"
-                  }`,
-                  paddingTop: "1.5rem",
-                  marginBottom: "1.5rem",
-                }}
-              >
-                {plan.features.map((f) => (
-                  <div
-                    key={f}
-                    style={{
-                      display: "flex",
-                      gap: "8px",
-                      alignItems: "flex-start",
-                      marginBottom: "0.6rem",
-                    }}
-                  >
-                    <span
-                      style={{ color: "#C4A97D", fontSize: "0.9rem", flexShrink: 0 }}
-                    >
-                      ✓
-                    </span>
-                    <span
-                      style={{
-                        fontFamily: "'Jost', sans-serif",
-                        fontSize: "0.85rem",
-                        color: plan.highlight
-                          ? "rgba(245,240,232,0.7)"
-                          : "#6B5E52",
-                        fontWeight: 300,
-                      }}
-                    >
-                      {f}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <Link
-                href={plan.href}
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  textDecoration: "none",
-                  padding: "0.8rem",
-                  borderRadius: "4px",
-                  fontFamily: "'Jost', sans-serif",
-                  fontSize: "0.875rem",
-                  fontWeight: 500,
-                  transition: "all 0.2s",
-                  background: plan.highlight
-                    ? "linear-gradient(135deg, #C4A97D, #8B6F47)"
-                    : "transparent",
-                  color: plan.highlight ? "#fff" : "#8B6F47",
-                  border: plan.highlight
-                    ? "none"
-                    : "1px solid rgba(196,169,125,0.4)",
-                }}
-                onMouseEnter={(e) => {
-                  if (!plan.highlight) {
-                    e.currentTarget.style.background = "#F5EFE4";
-                  } else {
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 6px 20px rgba(139,111,71,0.3)";
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (!plan.highlight) {
-                    e.currentTarget.style.background = "transparent";
-                  } else {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }
-                }}
-              >
-                {plan.cta}
-              </Link>
-            </div>
-          ))}
+        {/* Price display */}
+        <div style={{ display: "inline-flex", flexDirection: "column" as const, alignItems: "center", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(196,169,125,0.2)", borderRadius: "12px", padding: "2rem 3rem", marginBottom: "2.5rem" }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: "6px", marginBottom: "0.5rem" }}>
+            <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "4rem", color: "#F5EFE4", lineHeight: 1 }}>$299</span>
+          </div>
+          <div style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.8rem", color: "rgba(245,240,232,0.35)", marginBottom: "1.25rem" }}>one-time payment · no monthly fees · ever</div>
+          <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" as const, justifyContent: "center" }}>
+            {["Lifetime access", "Limited to 20 homes", "Full refund guarantee"].map((t) => (
+              <span key={t} style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", color: "rgba(245,240,232,0.4)", display: "flex", alignItems: "center", gap: "5px" }}>
+                <span style={{ color: "#C4A97D" }}>✓</span> {t}
+              </span>
+            ))}
+          </div>
         </div>
+
+        {/* CTA */}
+        <div style={{ display: "flex", flexDirection: "column" as const, alignItems: "center", gap: "1rem" }}>
+          <Link
+            href="/pricing"
+            style={{ display: "inline-flex", alignItems: "center", gap: "8px", textDecoration: "none", background: "linear-gradient(135deg, #C4A97D 0%, #8B6F47 100%)", color: "#fff", padding: "1rem 2.5rem", borderRadius: "4px", fontSize: "1rem", fontFamily: "'Jost', sans-serif", fontWeight: 500, boxShadow: "0 8px 28px rgba(139,111,71,0.35)", transition: "all 0.25s" }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 12px 36px rgba(139,111,71,0.45)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 8px 28px rgba(139,111,71,0.35)"; }}
+          >
+            See the Founding Partner Program →
+          </Link>
+          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.78rem", color: "rgba(245,240,232,0.25)" }}>
+            After launch: $49–$149/mo · Founding partners keep early pricing forever
+          </span>
+        </div>
+
       </div>
     </section>
   );
