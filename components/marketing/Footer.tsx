@@ -125,7 +125,7 @@ export default function Footer() {
               color: "#F5EFE4",
             }}
           >
-            Case<span style={{ color: "#C4A97D" }}>Flow</span>
+            Mary <span style={{ color: "#C4A97D" }}>Rose</span>
           </span>
         </div>
 
@@ -160,7 +160,7 @@ export default function Footer() {
             fontSize: "0.75rem",
           }}
         >
-          © {new Date().getFullYear()} CaseFlow. All rights reserved.
+          © {new Date().getFullYear()} Mary Rose. All rights reserved.
         </p>
       </div>
     </footer>

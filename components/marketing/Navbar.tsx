@@ -66,7 +66,7 @@ export default function Navbar() {
             letterSpacing: "-0.01em",
           }}
         >
-          Case<span style={{ color: "#B8864E" }}>Flow</span>
+          Mary <span style={{ color: "#B8864E" }}>Rose</span>
         </span>
       </Link>
 

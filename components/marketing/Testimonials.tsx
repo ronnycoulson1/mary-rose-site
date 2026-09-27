@@ -51,7 +51,7 @@ export default function Waitlist() {
         {/* Headline */}
         <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(2.2rem, 4vw, 3.2rem)", fontWeight: 400, color: "#F5EFE4", lineHeight: 1.15, textAlign: "center", marginBottom: "1.25rem" }}>
           Be one of the first 50<br />
-          <em style={{ color: "#C4A97D" }}>funeral homes on CaseFlow</em>
+          <em style={{ color: "#C4A97D" }}>funeral homes on Mary Rose</em>
         </h2>
 
         <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "1rem", fontWeight: 300, color: "rgba(245,240,232,0.5)", lineHeight: 1.8, textAlign: "center", marginBottom: "2.5rem", maxWidth: "520px", margin: "0 auto 2.5rem" }}>

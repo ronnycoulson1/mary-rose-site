@@ -40,7 +40,7 @@ export default function LoginPage() {
           🕊️
         </div>
           <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", fontWeight: 500, color: "#F5EFE4" }}>
-            Case<span style={{ color: "#C4A97D" }}>Flow</span>
+            Mary <span style={{ color: "#C4A97D" }}>Rose</span>
           </span>
         </Link>
 
@@ -55,7 +55,7 @@ export default function LoginPage() {
             <em style={{ color: "#C4A97D" }}>something meaningful.</em>
           </h2>
           <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.9rem", color: "rgba(245,240,232,0.45)", fontWeight: 300, lineHeight: 1.8, marginBottom: "2.5rem" }}>
-            CaseFlow is in early access. As a founding partner, your feedback directly shapes what we build next.
+            Mary Rose is in early access. As a founding partner, your feedback directly shapes what we build next.
           </p>
 
           {/* What founding partners get */}
@@ -96,7 +96,7 @@ export default function LoginPage() {
               Welcome back
             </h1>
             <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.9rem", color: "#9B8E84", fontWeight: 300 }}>
-              Sign in to your CaseFlow workspace
+              Sign in to your Mary Rose workspace
             </p>
           </div>
 

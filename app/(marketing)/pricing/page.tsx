@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const whatYouGet = [
-  { icon: Rocket, title: "Early access to the platform", desc: "Be the first to use CaseFlow before public launch" },
+  { icon: Rocket, title: "Early access to the platform", desc: "Be the first to use Mary Rose before public launch" },
   { icon: Infinity, title: "Lifetime founding partner pricing", desc: "Pay once. Never pay monthly. Ever." },
   { icon: Target, title: "Direct influence on development", desc: "Your feedback shapes what we build next" },
   { icon: Star, title: "Priority feature requests", desc: "Your requests go to the top of our list" },
@@ -41,14 +41,14 @@ const willManage = [
 const steps = [
   { num: "01", title: "Reserve your founding partner spot", desc: "Secure your place with a one-time payment of $299" },
   { num: "02", title: "Join the early partner group", desc: "Get added to our private partner community immediately" },
-  { num: "03", title: "Get access to the MVP platform", desc: "Be among the first to use CaseFlow before public launch" },
+  { num: "03", title: "Get access to the MVP platform", desc: "Be among the first to use Mary Rose before public launch" },
   { num: "04", title: "Provide feedback & feature requests", desc: "Tell us what works and what you need next" },
   { num: "05", title: "Help shape the future", desc: "Your input drives every product decision we make" },
 ];
 
 const faqs = [
-  { q: "What is the Founding Partner Program?", a: "It's our early access program for the first 20 funeral homes to join CaseFlow. Instead of waiting for a public launch, founding partners get in early, help shape the product, and lock in lifetime pricing for a one-time payment." },
-  { q: "What exactly is the $299?", a: "It's a one-time payment. No monthly fees, no annual renewals — ever. You pay $299 once and have lifetime access to CaseFlow and all future features included in the platform." },
+  { q: "What is the Founding Partner Program?", a: "It's our early access program for the first 20 funeral homes to join Mary Rose. Instead of waiting for a public launch, founding partners get in early, help shape the product, and lock in lifetime pricing for a one-time payment." },
+  { q: "What exactly is the $299?", a: "It's a one-time payment. No monthly fees, no annual renewals — ever. You pay $299 once and have lifetime access to Mary Rose and all future features included in the platform." },
   { q: "What if you don't launch on time?", a: "You get a full refund. No questions asked. We are committed to launching by June 2026 but we would rather refund you than rush a product that isn't ready." },
   { q: "What features are included at launch?", a: "The full MVP: case dashboard, case creation, task management, document hub, team collaboration, and family status sharing. Everything your team needs to run daily operations." },
   { q: "Will founding partners keep their pricing forever?", a: "Yes — permanently. After launch, pricing moves to $49–$149/month for new customers. Founding partners keep their one-time deal no matter how the product grows." },

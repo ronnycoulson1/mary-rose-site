@@ -50,7 +50,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </div>
           {!collapsed && (
             <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.3rem", fontWeight: 500, color: "#F5EFE4", whiteSpace: "nowrap" as const }}>
-              Case<span style={{ color: "#C4A97D" }}>Flow</span>
+              Mary <span style={{ color: "#C4A97D" }}>Rose</span>
             </span>
           )}
         </div>

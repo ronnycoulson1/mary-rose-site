@@ -64,7 +64,7 @@ export default function SignupPage() {
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
           <div style={{ width: 36, height: 36, borderRadius: "50%", background: "linear-gradient(135deg, #C4A97D, #8B6F47)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16 }}>🕊️</div>
           <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", fontWeight: 500, color: "#F5EFE4" }}>
-            Case<span style={{ color: "#C4A97D" }}>Flow</span>
+            Mary <span style={{ color: "#C4A97D" }}>Rose</span>
           </span>
         </Link>
 
@@ -199,7 +199,7 @@ export default function SignupPage() {
               <div style={{ display: "flex", flexDirection: "column" as const, gap: "1.25rem" }}>
                 <div style={{ background: "#FDF8F2", border: "1px solid rgba(196,169,125,0.2)", borderRadius: "8px", padding: "1rem 1.25rem" }}>
                   <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.85rem", color: "#8B6F47", fontWeight: 300, lineHeight: 1.6 }}>
-                    Team members will receive an email invite to join your CaseFlow workspace. You can add more from settings anytime.
+                    Team members will receive an email invite to join your Mary Rose workspace. You can add more from settings anytime.
                   </p>
                 </div>
                 {form.teamEmails.map((email, i) => (

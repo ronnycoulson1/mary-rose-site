@@ -46,7 +46,7 @@ export default function AboutPage() {
             <em style={{ color: "#B8864E" }}>We built the calm.</em>
           </h1>
           <p style={{ fontFamily: "'Jost', sans-serif", fontSize: "1.1rem", fontWeight: 300, lineHeight: 1.8, color: "#6B5E52" }}>
-            CaseFlow was born from a simple observation — funeral professionals were spending hours every week wrestling with spreadsheets, paper files, and disconnected tools, when they should have been focused entirely on the families in their care.
+            Mary Rose was born from a simple observation — funeral professionals were spending hours every week wrestling with spreadsheets, paper files, and disconnected tools, when they should have been focused entirely on the families in their care.
           </p>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function AboutPage() {
                 <div style={{ width: 40, height: 40, borderRadius: "50%", background: "linear-gradient(135deg, #C4A97D, #8B6F47)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontFamily: "'Jost', sans-serif", fontWeight: 600, fontSize: "0.85rem" }}>RC</div>
                 <div>
                   <div style={{ fontFamily: "'Jost', sans-serif", fontWeight: 500, color: "#1C1917", fontSize: "0.9rem" }}>Ronny Coulson</div>
-                  <div style={{ fontFamily: "'Jost', sans-serif", color: "#9B8E84", fontSize: "0.8rem" }}>Founder & CEO, CaseFlow</div>
+                  <div style={{ fontFamily: "'Jost', sans-serif", color: "#9B8E84", fontSize: "0.8rem" }}>Founder & CEO, Mary Rose</div>
                 </div>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
             </h2>
             {[
               { year: "2024", text: "We spent months talking to funeral directors, sitting in their offices, watching how they worked. The inefficiency was striking — and completely avoidable." },
-              { year: "2025", text: "We started building CaseFlow with one goal: make it so simple that picking it up feels like a relief. Our founding partners are shaping everything." },
+              { year: "2025", text: "We started building Mary Rose with one goal: make it so simple that picking it up feels like a relief. Our founding partners are shaping everything." },
               { year: "2026", text: "We're launching to the public this year. 20 founding funeral homes are helping us build the right product before we scale." },
             ].map((item) => (
               <div key={item.year} style={{ display: "flex", gap: "1.25rem", marginBottom: "1.75rem" }}>

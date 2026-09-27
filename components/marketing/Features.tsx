@@ -53,7 +53,7 @@ const launchFeatures = [
     number: "03",
     title: "Task & Workflow Management",
     tagline: "Nothing falls through the cracks. Ever.",
-    desc: "Funeral homes rely on manual checklists today — sticky notes, printed sheets, memory. CaseFlow turns every case into a structured workflow that your whole team can follow.",
+    desc: "Funeral homes rely on manual checklists today — sticky notes, printed sheets, memory. Mary Rose turns every case into a structured workflow that your whole team can follow.",
     bullets: [
       "Per-case task checklists — obtain death cert, coordinate clergy, prepare obituary, schedule removal",
       "Assign tasks to specific staff members",
@@ -83,7 +83,7 @@ const launchFeatures = [
     number: "05",
     title: "Team Collaboration",
     tagline: "Your whole team. One shared workspace.",
-    desc: "Instead of calling each other or sending emails to update a case, staff can leave notes, comments, and updates directly inside CaseFlow. Everyone stays aligned.",
+    desc: "Instead of calling each other or sending emails to update a case, staff can leave notes, comments, and updates directly inside Mary Rose. Everyone stays aligned.",
     bullets: [
       "Internal notes and comments per case",
       "Full activity history — see who updated what and when",
@@ -113,7 +113,7 @@ const launchFeatures = [
 const futureFeatures = [
   { icon: CreditCard, title: "Payments & Invoicing", desc: "Create and send invoices, track outstanding balances, and manage payment status per case." },
   { icon: Calendar, title: "Advanced Scheduling", desc: "Staff calendars, service scheduling, vehicle logistics, and conflict detection." },
-  { icon: Smartphone, title: "Mobile App", desc: "Full access to CaseFlow from any phone or tablet — on the go, at the home, anywhere." },
+  { icon: Smartphone, title: "Mobile App", desc: "Full access to Mary Rose from any phone or tablet — on the go, at the home, anywhere." },
   { icon: Sparkles, title: "AI Form Automation", desc: "Auto-fill forms using case data, scan handwritten documents, and speed up paperwork." },
   { icon: BarChart2, title: "Reports & Analytics", desc: "Monthly case volume, staff performance, revenue trends, and operational insights." },
   { icon: Globe, title: "Online Family Portal", desc: "A full arrangement portal where families can review options and e-sign forms online." },

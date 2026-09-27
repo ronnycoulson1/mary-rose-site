@@ -31,11 +31,11 @@ const stats = [
 ];
 
 const cases = [
-  { id: "CF-2024-001", name: "Johnson, Mary", status: "Arrangement", tasks: "3/5", staff: "RC", daysOpen: 2, statusColor: "#B8864E", statusBg: "rgba(184,134,78,0.1)" },
-  { id: "CF-2024-002", name: "Williams, Robert", status: "First Call", tasks: "1/3", staff: "JD", daysOpen: 0, statusColor: "#059669", statusBg: "rgba(5,150,105,0.1)" },
-  { id: "CF-2024-003", name: "Davis, Helen", status: "Service", tasks: "5/5", staff: "RC", daysOpen: 5, statusColor: "#7C3AED", statusBg: "rgba(124,58,237,0.1)" },
-  { id: "CF-2024-004", name: "Miller, James", status: "Closed", tasks: "6/6", staff: "JD", daysOpen: 12, statusColor: "#6B7280", statusBg: "rgba(107,114,128,0.1)" },
-  { id: "CF-2024-005", name: "Thompson, Sarah", status: "Arrangement", tasks: "2/4", staff: "RC", daysOpen: 1, statusColor: "#B8864E", statusBg: "rgba(184,134,78,0.1)" },
+  { id: "MR-2024-001", name: "Johnson, Mary", status: "Arrangement", tasks: "3/5", staff: "RC", daysOpen: 2, statusColor: "#B8864E", statusBg: "rgba(184,134,78,0.1)" },
+  { id: "MR-2024-002", name: "Williams, Robert", status: "First Call", tasks: "1/3", staff: "JD", daysOpen: 0, statusColor: "#059669", statusBg: "rgba(5,150,105,0.1)" },
+  { id: "MR-2024-003", name: "Davis, Helen", status: "Service", tasks: "5/5", staff: "RC", daysOpen: 5, statusColor: "#7C3AED", statusBg: "rgba(124,58,237,0.1)" },
+  { id: "MR-2024-004", name: "Miller, James", status: "Closed", tasks: "6/6", staff: "JD", daysOpen: 12, statusColor: "#6B7280", statusBg: "rgba(107,114,128,0.1)" },
+  { id: "MR-2024-005", name: "Thompson, Sarah", status: "Arrangement", tasks: "2/4", staff: "RC", daysOpen: 1, statusColor: "#B8864E", statusBg: "rgba(184,134,78,0.1)" },
 ];
 
 const recentTasks = [
@@ -86,7 +86,7 @@ function EmbeddedDashboard() {
         <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28CA41" }} />
         <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
           <div style={{ background: "rgba(255,255,255,0.06)", borderRadius: "4px", padding: "2px 20px", fontFamily: "'Jost', sans-serif", fontSize: "0.68rem", color: "rgba(255,255,255,0.25)" }}>
-            app.caseflow.com/dashboard
+            app.maryrose.com/dashboard
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@ function EmbeddedDashboard() {
             <div style={{ width: 28, height: 28, borderRadius: "7px", background: "linear-gradient(135deg, #C4A97D, #8B6F47)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
               <Bird size={14} color="#fff" strokeWidth={1.5} />
             </div>
-            {!collapsed && <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.2rem", fontWeight: 500, color: "#F5EFE4", whiteSpace: "nowrap" as const }}>Case<span style={{ color: "#C4A97D" }}>Flow</span></span>}
+            {!collapsed && <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.2rem", fontWeight: 500, color: "#F5EFE4", whiteSpace: "nowrap" as const }}>Mary <span style={{ color: "#C4A97D" }}>Rose</span></span>}
           </div>
 
           <nav style={{ flex: 1, padding: "0.75rem 0.6rem", display: "flex", flexDirection: "column" as const, gap: "2px" }}>
@@ -288,7 +288,7 @@ export default function DemoPage() {
               <Bird size={19} color="#fff" strokeWidth={1.5} />
             </div>
             <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", fontWeight: 500, color: "#F5EFE4" }}>
-              Case<span style={{ color: "#C4A97D" }}>Flow</span>
+              Mary <span style={{ color: "#C4A97D" }}>Rose</span>
             </span>
           </div>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(196,169,125,0.1)", border: "1px solid rgba(196,169,125,0.25)", padding: "0.4rem 1.1rem", borderRadius: "100px", marginBottom: "2rem" }}>
@@ -411,10 +411,10 @@ export default function DemoPage() {
           <div style={{ width: 26, height: 26, borderRadius: "50%", background: "linear-gradient(135deg, #C4A97D, #8B6F47)", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Bird size={13} color="#fff" strokeWidth={1.5} />
           </div>
-          <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.1rem", color: "#F5EFE4" }}>Case<span style={{ color: "#C4A97D" }}>Flow</span></span>
+          <span style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.1rem", color: "#F5EFE4" }}>Mary <span style={{ color: "#C4A97D" }}>Rose</span></span>
         </div>
         <p style={{ fontSize: "0.72rem", color: "rgba(245,240,232,0.2)", fontWeight: 300 }}>
-          Questions? <a href="mailto:hello@caseflow.com" style={{ color: "#C4A97D", textDecoration: "none" }}>hello@caseflow.com</a>
+          Questions? <a href="mailto:hello@maryrose.com" style={{ color: "#C4A97D", textDecoration: "none" }}>hello@maryrose.com</a>
         </p>
       </div>
     </div>
